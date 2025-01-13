@@ -41,6 +41,8 @@ export default function Chat() {
     error,
   } = useChat({ api: "/api/gemini" });
 
+  console.log(error);
+
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -185,7 +187,7 @@ export default function Chat() {
                         type="button"
                         onClick={() => reload()}
                       >
-                      {error}
+                      
                         Retry
                       </button>
                     </div>
