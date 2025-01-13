@@ -22,7 +22,7 @@ import {
   ArrowDownCircleIcon,
 } from "lucide-react";
 
-import { motion, AnimatePresence, animate } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useChat } from "@ai-sdk/react";
 
 export default function Chat() {
@@ -146,8 +146,10 @@ export default function Chat() {
                             : "bg-muted p-2"
                         }`}
                       >
+                    
                         <ReactMarkdown
-                          children={message.content}
+                          // eslint-disable-next-line
+                          children={message?.content}
                           remarkPlugins={[remarkGfm]}
                           components={{
                             ul:({children})=>(
