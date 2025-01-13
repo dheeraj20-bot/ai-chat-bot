@@ -185,6 +185,7 @@ export default function Chat() {
                         type="button"
                         onClick={() => reload()}
                       >
+                      {error}
                         Retry
                       </button>
                     </div>
